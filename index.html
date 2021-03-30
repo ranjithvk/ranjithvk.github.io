@@ -416,6 +416,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 							<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
 							<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
 							<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+							<div class="g-recaptcha-response"></div>
 							<div class="col-12">
 								<ul class="actions special">
 									<li><input type="submit" value="Send Message" class="primary" /></li>
@@ -443,6 +444,13 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script>
+				window.onload = function() { 
+				  var el = document.getElementById('g-recaptcha-response'); 
+				  if (el) { 
+					el.setAttribute('required', 'required'); 
+				  } 
+				}
+			</script>
 	</body>
 </html>
